@@ -1,6 +1,4 @@
 #!/bin/bash
-O string SCHOOL School data !:mime School
-O string SCHOOL School data
-O string SCHOOL school data
-!:mime School
 0 string SCHOOL school data !:mime School
+file -c -m school.mgc *
+file --mime-type -m school.mgc *
