@@ -1,1 +1,1 @@
-Create a script that creates a directory named my_first_directory in the /tmp/ directory
+Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u
