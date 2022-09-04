@@ -1,5 +1,2 @@
 #!/bin/bash
-O string SCHOOL school data 
-!:mime School
-file -c -m school
-file --mime-type -m school
+0 string SCHOOL school data !:mime School
