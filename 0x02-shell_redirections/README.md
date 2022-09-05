@@ -1,1 +1,1 @@
-A script that writes into the file
+A script that duplicates the last line of the file
