@@ -1,1 +1,1 @@
-Converts a number from base 10 to base 16
+Encode and decode text using the rot13 encryption
