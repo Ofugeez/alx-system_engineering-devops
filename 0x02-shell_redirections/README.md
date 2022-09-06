@@ -1,1 +1,1 @@
-Write a script that lists all the files with a .gif extension
+An acrostic is a poem
