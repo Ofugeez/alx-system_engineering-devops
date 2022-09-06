@@ -1,1 +1,1 @@
-Add /action to the PATH
+Create a script that prints hello user
