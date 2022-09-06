@@ -1,1 +1,1 @@
-Create a script that creates a new global variable
+Converts a number from base 10 to base 16
