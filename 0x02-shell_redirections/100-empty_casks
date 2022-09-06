@@ -1,2 +1,2 @@
 #!/bin/bash
-fin . -empty -print "%f\n"
+fin . -empty -printf "%f\n"
