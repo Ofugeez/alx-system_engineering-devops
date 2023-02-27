@@ -1,1 +1,2 @@
-Delete the directory my_first_directory
+This is My Parent Readme
+I love coding
