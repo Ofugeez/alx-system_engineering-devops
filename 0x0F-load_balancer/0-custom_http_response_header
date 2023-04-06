@@ -1,29 +1,21 @@
 #!/usr/bin/env bash
-# 404 Not Found Page
 
-apt-get update
-apt-get install -y nginx
+# This script configures Nginx on an Ubuntu machine to add a custom HTTP header to its HTTP response
 
-touch /var/www/html/index.html /var/www/html/404.html
-echo "Hello World!" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
+set -euo pipefail
 
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    add_header X-Served-By $HOSTNAME;
-    root   /var/www/html/;
-    index  index.html index.htm;
+# Update the package list and install Nginx
+sudo apt-get update
+sudo apt-get install -y nginx
 
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=TfgBHC5gvTI;
-    }
+# Define a variable to store the hostname of the current server
+HOSTNAME=$(hostname)
 
-    error_page 404 /404.html;
-    location /404 {
-        root /var/www/html/;
-        internal;
-    }
-}" > /etc/nginx/sites-available/default
+# Add a custom HTTP header to Nginx's HTTP response
+sudo sed -i '/^http {/a \        add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
 
-service nginx restart
+# Restart Nginx to apply the changes
+sudo systemctl restart nginx
+
+# Exit the script with a success status
+exit 0
